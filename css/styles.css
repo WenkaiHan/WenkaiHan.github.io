@@ -1,0 +1,74 @@
+
+
+/* The color scheme of this page is from Microsoft Logo color scheme, 
+as this study is focused on a Microsoft product*/ 
+
+
+
+#hoverText:hover{
+    background-color: #737373;
+    color:white;
+}
+
+h1{
+    color: white;
+    background-color: #00a1f1;
+
+}
+
+h2{
+    color: white;
+    background-color: #ffba07;
+
+}
+
+h3{
+    color: white;
+    background-color: #f65d35;
+
+}
+
+
+footer{
+    color:white;
+    background-color: #7cbb00;
+
+
+}
+
+
+h1, h2, h3, p.fig, footer{
+    text-align:center;
+    line-height: 175%;
+    border-radius: 2px;
+    opacity:0.9;
+}
+
+h3{
+    width: 30%;
+    margin-left: auto; 
+    margin-right:auto; 
+    display:block;
+}
+
+img{
+    margin-left: auto; 
+    margin-right:auto; 
+    display:block;
+    width: 80%;
+    max-width: 700px;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+table{
+    margin:auto;
+}
+
+th, td{
+    padding: 15px;
+}
+
+td{
+    text-align:center;
+}
