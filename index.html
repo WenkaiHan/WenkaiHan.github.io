@@ -40,16 +40,15 @@
       </header>
 
       <main role="main" class="inner cover">
-          <h1 class="cover-heading">UX Researcher and Data Analyst</h1>
-          <p class="lead">I'm passionate about User Experience. With my background in Human Computer Interaction, Web Programming, Internet of Things and Psychology, 
-              I can help you connect your users' input and development efficiently, and improve your products in all perspectives.</p>     
+          <h1 class="cover-heading">UX Researcher in Data Visualization</h1>
+          <p class="lead">Ph.D. in Computer Science at Aarhus University</p>     
           <a href="ux_design.html" class="btn blue_button btn-secondary" id="uxdesign">UX Design</a>
           <a href="data_analysis.html" class="btn yellow_button btn-secondary">Data Analysis</a>
           <a href="research.html" class="btn red_button btn-secondary">Research</a>
           <button id="know" class="btn green_button btn-secondary">Know More</button>
           <div id="panel">
               <p>
-                  I’ve been studying and working in HCI for more than a year with a wide range of experiences – no matter it’s quantitative or qualitative, lab or contextual, evaluation or design. With more than ten project-based courses in this field, I’m able to lead comprehensive user research projects considering the time, accuracy as well as the budgets.
+                  I’ve been studying and working in HCI for more than 2 years with a wide range of experiences – no matter it’s quantitative or qualitative, lab or contextual, evaluation or design. With more than ten project-based courses in this field, I’m able to lead comprehensive user research projects considering the time, accuracy as well as the budgets.
               </p>
                 <p>
                     For data analysis, I’m experienced in Excel and SPSS, and doing Data Visualization focusing on Tableau, R and D3.js. I also won several national and international awards in Mathematical Modelling - in which I processed datasets using different statistical tools and presented them in an intelligible way.  
