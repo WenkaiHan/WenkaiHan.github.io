@@ -52,6 +52,7 @@ a:hover {
 
 .btn-secondary:hover,
 .btn-secondary:focus {
+  background-color: #080808;
   color: #fff;
 }
 
@@ -66,18 +67,32 @@ a:hover {
 
 }
 
+.blue_button:focus{
+  background-color: #004f77;
+}
+
 .yellow_button{
   background-color: #ffba07;
 
 }
-
+.yellow_button:focus{
+  background-color: #a77700;
+}
 .red_button{
   background-color: #f65d35;
 
 }
 
+.red_button:focus{
+  background-color: #97341b;
+}
+
 .green_button{
   background-color: #7cbb00;
+}
+
+.green_button:focus{
+  background-color: #4f7502;
 }
 
 .title{
@@ -183,9 +198,12 @@ body {
 
 
 .filterDiv {
-  display: none;
+
+  opacity: 0.1;
+  transition: visibility 0s linear 0.33s, opacity 0.33s linear;
 }
 
 .show {
-  display: block;
+
+  opacity: 1;
 }
