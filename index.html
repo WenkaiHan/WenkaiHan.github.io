@@ -17,13 +17,7 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous">
     </script>
-    <script> 
-      $(document).ready(function(){
-          $("#know").click(function(){
-              $("#panel").fadeToggle();//show more information when "know more" is clicked
-          });
-      });
-    </script>
+
   </head>
 
   <body class="text-center">
@@ -41,11 +35,14 @@
 
       <main role="main" class="inner cover" style="margin-top:2em;">
           <h1 class="cover-heading">UX Researcher in Visualization</h1>
-          <p class="lead">Ph.D. in Computer Science at Aarhus University</p>     
-          <a href="ux_design.html" class="btn blue_button btn-secondary" id="uxdesign">UX Design</a>
-          <a href="data_analysis.html" class="btn yellow_button btn-secondary">Data Analysis</a>
-          <a href="research.html" class="btn red_button btn-secondary">Research</a>
-          <button id="know" class="btn green_button btn-secondary">Know More</button>
+          <p class="lead">Ph.D. in Computer Science at Aarhus University</p>  
+          <div id="myBtnContainer"> 
+            <button id="ux" class="btn blue_button btn-secondary" onclick="filterSelection('ux')">UX Design</button>
+            <button id="data" class="btn yellow_button btn-secondary" onclick="filterSelection('data')">Data Analysis</button>
+            <button id="res" class="btn red_button btn-secondary" onclick="filterSelection('res')">Research</button>
+            <button id="com" class="btn green_button btn-secondary" onclick="filterSelection('com')">Communication</button>
+            <button id="all" class="btn btn_active btn-secondary" onclick="filterSelection('all')">Show All</button>
+          </div>  
           <div id="panel" style="margin-top:1em;">
               <p>
                   I’ve been studying and working in HCI for more than 4 years with a wide range of experiences – no matter it’s quantitative or qualitative, lab or contextual, evaluation or design. With more than ten project-based courses in this field, I’m able to lead comprehensive user research projects considering the time, accuracy as well as the budgets.
@@ -60,8 +57,8 @@
 
 
 
-          <div class="row" style="margin-top:3em;">
-            <div class="col-md-4">
+          <div class="row container" style="margin-top:3em;">
+            <div class="col-md-4 filterDiv ux res data">
               <div class="thumbnail"><!-- border / background style -->
                 <a href="holo_lens.html">
                   <img src="images/ux/hololens.jpg" alt="HoloLens" class="gallery">
@@ -71,7 +68,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 filterDiv ux res">
               <div class="thumbnail">
                 <a href="job_application.html">
                   <img src="images/ux/ucsd.png" alt="User_Centered" class="gallery">
@@ -81,7 +78,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 filterDiv ux res data">
               <div class="thumbnail">
                 <a href="usability_testing.html">
                   <img src="images/ux/usability.jpg" alt="Usability" class="gallery">
@@ -91,12 +88,9 @@
                 </a>
               </div>
             </div>
-          </div>
 
-      
-
-          <div class="row">
-            <div class="col-md-4">
+ 
+            <div class="col-md-4 filterDiv ux">
               <div class="thumbnail">
                 <a href="smart_home.html">
                   <img src="images/ux/home.png" alt="Home" class="gallery">
@@ -106,7 +100,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 filterDiv ux">
               <div class="thumbnail">
                 <a href="pub.html">
                   <img src="images/ux/pub.png" alt="Pub" class="gallery">
@@ -116,7 +110,7 @@
                 </a>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 filterDiv ux res">
               <div class="thumbnail">
                 <a href="robot.html">
                   <img src="images/ux/robot.png" alt="Robot" class="gallery">
@@ -126,13 +120,9 @@
                 </a>
               </div>
             </div>
-          </div>
 
 
-          <div class="row">
-
-
-            <div class="col-md-4">
+            <div class="col-md-4 filterDiv ux res">
                 <div class="thumbnail">
                   <a href="color_red.html">
                     <img src="images/research/red_study.png" alt="red_study" class="gallery">
@@ -143,7 +133,7 @@
                 </div>
               </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 filterDiv res data">
                 <div class="thumbnail">
                   <a href="math_model.html">
                     <img src="images/data/depth.png" alt="Depth" class="gallery">
@@ -153,6 +143,7 @@
                   </a>
                 </div>
               </div>
+          </div>
       </main>
 
       <footer class="mastfoot mt-auto">
@@ -168,5 +159,62 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script> 
+      $(document).ready(function(){
+          $("#know").click(function(){
+              $("#panel").fadeToggle();//show more information when "know more" is clicked
+          });
+      });
+
+      filterSelection("all")
+
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c == "all") c = "";
+        // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
+
+      // Show filtered elements
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {
+            element.className += " " + arr2[i];
+          }
+        }
+      }
+
+      // Hide elements that are not selected
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+
+      // Add active class to the current control button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("btn_active");
+          current[0].className = current[0].className.replace(" btn_active", "");
+          this.className += " btn_active";
+        });
+      }
+    </script>
+ 
   </body>
 </html>

@@ -49,25 +49,33 @@ a:hover {
   margin-top: 1em;
 }
 
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #fff;
+}
 
+
+.btn_active {
+  color: white;
+  border: .1rem solid white;
+}
 
 .blue_button{
   background-color: #00a1f1;
-  border: .05rem solid #00a1f1;
+
 }
 
 .yellow_button{
   background-color: #ffba07;
-  border: .05rem solid #ffba07; 
+
 }
 
 .red_button{
   background-color: #f65d35;
-  border: .05rem solid #f65d35;
+
 }
 
 .green_button{
-  border: .05rem solid #7cbb00;
   background-color: #7cbb00;
 }
 
@@ -170,4 +178,13 @@ body {
  */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
+}
+
+
+.filterDiv {
+  display: none;
+}
+
+.show {
+  display: block;
 }
