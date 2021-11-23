@@ -38,6 +38,7 @@ a:hover {
 
 .caption{
   text-align: center;
+  margin: .1em;
 }
 /* Custom default button */
 .btn-secondary,
