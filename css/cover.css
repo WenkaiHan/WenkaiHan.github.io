@@ -31,7 +31,7 @@ a:hover {
   width: 90%;
   background-color: rgba(25, 25, 25, 0.60);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
-  margin-bottom: 20%;
+  margin-bottom: 3em;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -168,7 +168,7 @@ body {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 48em) {
+@media (min-width: 768px) {
   .masthead-brand {
     float: left;
   }
@@ -177,6 +177,10 @@ body {
   }
 }
 
+
+@media (min-width: 1200px) {
+
+}
 
 /*
  * Cover
@@ -208,3 +212,6 @@ body {
 
   opacity: 1;
 }
+
+
+
